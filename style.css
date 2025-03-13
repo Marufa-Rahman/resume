@@ -1,0 +1,249 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf6;
+    color: #333;
+    position: relative;
+}
+
+/* Pseudo-element to overlay background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/pattern.png');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.social-icons a {
+    color: #c04d00;
+}
+
+.social-icons a:hover {
+    color: #504f4e;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #c04d00;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #c04d00;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 80px 20px;
+    background-color: #f9f4ef;
+    border-bottom: 3px solid #c04d00;
+}
+
+.hero-container {
+    display: flex;
+    max-width: 1100px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 32px;
+    color: #c04d00;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #444;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+} 
+
+/* General Section Styling */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #f9f4ef;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+section + section {
+    margin-top: -20px;
+}
+
+h2 {
+    color: #c04d00;
+    border-bottom: 2px solid #c04d00;
+    padding-bottom: 5px;
+    font-size: 24px;
+}
+
+/* Responsive Section Adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 15px;
+        max-width: 95%;
+    }
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Timeline for Experience, Education, Extra-Curricular & Skills */
+.timeline {
+    position: relative;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+.timeline::before {
+    display: none;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    display: none;
+}
+
+.timeline-content {
+    background: #fdf3eb;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    color: #c04d00;
+    font-size: 18px;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Skills Section */
+.skills .timeline-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.skill-icons img {
+    width: 50px; /* Uniform icon size */
+    height: 50px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: #f2e1d4;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #c04d00;
+    color: white;
+    margin-top: 30px;
+}
